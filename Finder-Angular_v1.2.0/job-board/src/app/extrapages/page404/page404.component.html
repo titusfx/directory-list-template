@@ -1,0 +1,25 @@
+<main class="page-wrapper">
+  <!-- Page content-->
+  <section class="d-flex align-items-center position-relative min-vh-100 pt-sm-5 pt-4 pb-5" style="background: radial-gradient(95.96% 126.3% at 88.07% 109.91%, #F4F1FF 6.21%, #F5F4F8 40.55%, rgba(245, 244, 248, 0) 100%);">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-5 align-self-sm-end mt-lg-5 pt-lg-5">
+          <div class="ratio ratio-1x1 mx-auto" style="max-width: 526px;">
+          <ng-lottie [options]="options" (animationCreated)="animationCreated($event)"></ng-lottie>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6 offset-lg-2 offset-md-1 text-md-start text-center">
+          <h1 class="display-3 mb-4 pb-md-3">Whoops, <br> the page is gone <span class='text-nowrap'>:(</span></h1>
+          <p class="lead mb-md-5 mb-4">The link you clicked may be broken or the page may have been removed. You can try the search box or get back to the <a routerLink="">homepage</a>.</p>
+          <!-- Search form-->
+          <form class="form-group rounded-pill">
+            <div class="input-group input-group-lg">
+              <input class="form-control" type="text" placeholder="Your search keywords...">
+            </div>
+            <button class="btn btn-primary btn-lg rounded-pill" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

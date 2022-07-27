@@ -1,0 +1,61 @@
+<main class="page-wrapper">
+  <!-- Header-->
+  <app-header id="top"></app-header>
+ <!-- Page header-->
+ <section class="bg-dark py-5">
+  <div class="container pt-5 pb-5">
+    <!-- Breadcrumbs + page title-->
+    <app-breadcrumbs [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+
+    <!-- Page title-->
+    <div class="mb-lg-5 mx-auto text-center" style="max-width: 856px;">
+      <h1 class="text-light mb-2 pb-1">Need help?</h1>
+      <p class="mb-5 fs-3 text-light">All answers are already here</p>
+      <!-- Search form-->
+      <form class="form-group form-group-lg form-group-light rounded-pill">
+        <input class="form-control" type="text" placeholder="What are you looking for?">
+        <button class="btn btn-lg btn-primary rounded-pill px-sm-4 px-3" type="submit"><i class="fi-search me-sm-2"></i><span class="d-sm-inline d-none">Search</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+ <!-- Help by category-->
+ <section class="position-relative bg-white rounded-xxl-4 mb-5 pt-md-3 pb-lg-5 zindex-5" style="margin-top: -30px;">
+  <div class="container pt-5">
+    <h2 class="mb-4 pb-2 text-center">Help by category</h2>
+    <div class="row g-4">
+      <!-- Item-->
+      <div class="col-md-4" *ngFor="let data of topicsData">
+        <div class="card card card-hover border-0 shadow-sm position-relative h-100">
+          <div class="card-body pb-0 icon-box">
+            <div class="icon-box-media d-flex align-items-center justify-content-center bg-secondary text-body rounded-circle mb-3" style="width: 4rem; height: 4rem;">
+              <i class="{{data.icon}} fs-3"></i>
+            </div>
+            <h3 class="h4 pb-1 icon-box-title">{{data.title}}</h3>
+            <p class="mb-1">{{data.content}}</p>
+          </div>
+          <div class="card-footer pt-0 border-0">
+            <a class="nav-link my-1 px-0 stretched-link" routerLink="{{data.link}}">{{data.btn}}<i class="fi-chevron-right ms-2 mt-n1 align-middle fs-xs"></i></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Contact Us CTA-->
+ <section class="container mb-5 pb-lg-5">
+  <div class="py-md-4 py-5 bg-secondary rounded-3">
+    <div class="col-sm-10 col-11 d-flex flex-md-row flex-column align-items-center justify-content-between mx-auto px-0">
+      <div class="order-md-1 order-2 text-md-start text-center" style="max-width: 524px;">
+        <h2 class="mb-4 pb-md-3">You can contact us and ask your questions directly</h2><a class="btn btn-lg btn-primary rounded-pill w-sm-auto w-100" routerLink="/pages/contacts">Contact us</a>
+      </div><img class="order-md-2 order-1 ms-md-4" src="assets/img/job-board/illustrations/mail.svg" alt="Illustration">
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer-->
+<app-footer></app-footer>
+
